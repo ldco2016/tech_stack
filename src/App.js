@@ -6,10 +6,12 @@ import reducers from './reducers';
 import { Header } from './components/common';
 import LibraryList from './components/LibraryList';
 
+store = createStore(reducers);
+
 const App = () => {
   return (
-    <Provider store={createStore(reducers)}>
-      <View>
+    <Provider store={store}>
+      <View style={{ flex: 1 }}>
         <Header headerText="Tech Stack" />
         <LibraryList />
       </View>
